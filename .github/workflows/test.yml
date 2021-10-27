@@ -1,0 +1,16 @@
+name: SlackNotifyTest
+on:
+  workflow_dispatch:
+jobs:
+  notify:
+    name: Notify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: notify_slack
+        uses: ctw-suguru-tanishima/notify-slack@main
+        with:
+          token: ${{ secrets.SLACK_TOKEN }}
+          channel: ${{ secrets.SLACK_CHANNEL }}
+          attachments_color: "#d2b48c"
+          attachments_text: "Test"
