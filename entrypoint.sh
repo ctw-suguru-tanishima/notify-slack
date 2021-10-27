@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 curl -XPOST -d "token=${INPUT_TOKEN}" \
     -d "channel=${INPUT_CHANNEL}" \
